@@ -20,4 +20,11 @@ describe("FunctionsDemo", function () {
     await demo.increment();
     expect(await demo.getCounter()).to.equal(1);
   });
+
+  it("addMemoryExample() should return [1,2,3]", async function () {
+  const result = await demo.addMemoryExample();
+  const numbers = result.map(n => n.toNumber());
+  expect(numbers).to.deep.equal([1, 2, 3]);
+});
+
 });
